@@ -42,8 +42,9 @@ function App() {
         <div className="flex flex-col gap-10 items-center">
           <h1 className="showXElements">Hola a todos!</h1>
           <p className="font-light showXElements">
-            Soy un desarrollador Fullstack con especializado en el <b>frontend</b>, enfocado en el diseño y desarrollo de interfaces. Mi enfoque principal es crear interfaces <b>intuitivas</b> y
-            fácilmente <b>mantenibles</b>. Tengo experiencia en tecnologías como <b>React, Next.js, Astro, Tailwind CSS, Bootstrap y Syncfusion</b>, entre otras.
+            Soy un desarrollador Fullstack con especialización en el <b>frontend</b>, enfocado en el diseño (UI/UX) y desarrollo de interfaces web. Principalmente busco desarrollar aplicaciones{' '}
+            <b>mantenibles</b>, <b>accesibles</b> y <b>fáciles de manejar</b> por el usuario. Tengo experiencia en tecnologías como <b>React</b>, <b>Next.js</b>, <b>Astro</b>, <b>Tailwind CSS</b>,{' '}
+            <b>Bootstrap</b>, <b>Figma</b>, entre otras.
           </p>
           <a
             className="w-2/3 min-w-max no-underline font-medium text-2xl text-light-on-tertiary-container dark:text-dark-on-tertiary-container py-2 px-12 bg-light-tertiary-container dark:bg-dark-tertiary-container rounded-full shadow-sm shadow-light-shadow dark:shadow-dark-shadow hover:cursor-pointer hover:scale-110"
