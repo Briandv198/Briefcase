@@ -2,20 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: 'Readex Pro';
-}
+@layer base {
+  * {
+    font-family: 'Readex Pro';
+  }
 
-body {
-  @apply text-dark-on-background bg-gradient-to-br from-dark-surface to-dark-surface-container-low;
-}
+  body {
+    @apply text-dark-on-background bg-gradient-to-br from-dark-surface to-dark-surface-container-low;
+  }
 
-b {
-  @apply text-dark-primary;
-}
+  h1 {
+    @apply text-6xl font-bold;
+    @apply xl:text-7xl;
+  }
 
-a {
-  @apply underline text-dark-tertiary;
+  h2 {
+    @apply text-5xl font-semibold;
+    @apply xl:text-6xl;
+  }
+
+  h3 {
+    @apply text-3xl font-semibold;
+    @apply xl:text-4xl;
+  }
+
+  p {
+    @apply text-base;
+    @apply xl:text-lg;
+  }
+
+  b {
+    @apply text-dark-primary font-semibold;
+  }
+
+  a {
+    @apply underline text-dark-tertiary;
+  }
+}
+@layer components {
+  .hero-container {
+    @apply p-8 flex flex-col gap-14 justify-center items-center text-center;
+    @apply xl:flex-row xl:px-28;
+  }
+
+  .stack-image {
+    @apply h-16 hover:animate-pulse hover:scale-110 showXElements object-contain;
+    @apply xl:h-20;
+  }
+
+  .card-project {
+    @apply p-4 flex flex-col gap-8 bg-dark-primary-container text-dark-on-primary-container rounded border-2 border-dark-outline showXElements;
+    @apply w-full max-w-md min-w-min;
+    @apply md:w-full md:max-w-none md:flex-row;
+  }
+
+  .card-project > div {
+    @apply md:h-full md:justify-around;
+  }
+
+  .card-project img {
+    @apply md:w-1/3 object-contain;
+  }
 }
 
 /* Animations */
