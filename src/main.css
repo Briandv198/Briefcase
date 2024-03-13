@@ -12,27 +12,27 @@
   }
 
   h1 {
-    @apply text-6xl font-bold;
+    @apply text-6xl font-bold dark:font-semibold;
     @apply xl:text-7xl;
   }
 
   h2 {
-    @apply text-5xl font-semibold;
+    @apply text-5xl font-semibold dark:font-medium;
     @apply xl:text-6xl;
   }
 
   h3 {
-    @apply text-3xl font-semibold;
+    @apply text-3xl font-semibold dark:font-medium;
     @apply xl:text-4xl;
   }
 
   p {
-    @apply text-base;
+    @apply text-base  dark:font-light;
     @apply xl:text-lg;
   }
 
   b {
-    @apply text-light-primary dark:text-dark-primary font-semibold;
+    @apply text-light-primary dark:text-dark-primary font-semibold  dark:font-medium;
   }
 
   a {
