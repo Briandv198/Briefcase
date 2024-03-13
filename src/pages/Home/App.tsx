@@ -47,7 +47,7 @@ function App() {
             <b>Bootstrap</b>, <b>Figma</b>, entre otras.
           </p>
           <a
-            className="w-2/3 min-w-max no-underline font-medium text-2xl text-light-on-tertiary-container dark:text-dark-on-tertiary-container py-2 px-12 bg-light-tertiary-container dark:bg-dark-tertiary-container rounded-full shadow-sm shadow-light-shadow dark:shadow-dark-shadow hover:cursor-pointer hover:scale-110"
+            className="w-2/3 min-w-max no-underline font-medium text-2xl text-light-on-tertiary-container dark:text-dark-on-tertiary-container py-2 px-12 bg-light-tertiary-container dark:bg-dark-tertiary-container rounded-full shadow-sm shadow-light-shadow dark:shadow-dark-shadow hover:cursor-pointer hover:scale-105 transition-all ease-in-out"
             href="https://www.linkedin.com/in/briandv198"
           >
             Contacto

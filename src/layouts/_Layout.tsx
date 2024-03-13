@@ -23,7 +23,7 @@ const _Layout = ({ children }: props) => {
   return (
     <>
       <div
-        className="absolute top-0 right-0 m-4 p-2 inline-block z-50 bg-light-secondary-container dark:bg-dark-secondary-container rounded-full shadow-sm shadow-light-shadow dark:shadow-dark-shadow hover:cursor-default hover:scale-110"
+        className="absolute top-0 right-0 m-4 p-2 inline-block z-50 bg-light-secondary-container dark:bg-dark-secondary-container rounded-full shadow-sm shadow-light-shadow dark:shadow-dark-shadow hover:cursor-pointer hover:scale-110 transition-all ease-in-out"
         onClick={handleDarkMode}
       >
         <svg

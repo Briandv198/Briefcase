@@ -46,7 +46,7 @@
   }
 
   .stack-image {
-    @apply h-16 hover:animate-pulse hover:scale-110 showXElements object-contain;
+    @apply h-16 hover:animate-pulse hover:scale-110 showXElements object-contain transition-all ease-in-out;
     @apply xl:h-20;
   }
 
