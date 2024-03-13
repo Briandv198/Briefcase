@@ -1,5 +1,5 @@
 const Footer = () => (
-  <footer className="flex flex-col gap-4 bg-dark-secondary-container p-10 text-center text-dark-on-secondary-container">
+  <footer className="flex flex-col gap-4 bg-light-secondary-container dark:bg-dark-secondary-container p-10 text-center text-light-on-secondary-container dark:text-dark-on-secondary-container">
     <p className="text-xl font-semibold">Contacto:</p>
     <ul>
       <li>

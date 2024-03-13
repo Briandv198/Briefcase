@@ -45,7 +45,10 @@ function App() {
             Soy un desarrollador Fullstack con especializado en el <b>frontend</b>, enfocado en el diseño y desarrollo de interfaces. Mi enfoque principal es crear interfaces <b>intuitivas</b> y
             fácilmente <b>mantenibles</b>. Tengo experiencia en tecnologías como <b>React, Next.js, Astro, Tailwind CSS, Bootstrap y Syncfusion</b>, entre otras.
           </p>
-          <a className="w-2/3 min-w-max no-underline font-medium text-2xl text-dark-on-tertiary-container py-2 px-12 bg-dark-tertiary-container rounded-full" href="www.linkedin.com/in/briandv198">
+          <a
+            className="w-2/3 min-w-max no-underline font-medium text-2xl text-light-on-tertiary-container dark:text-dark-on-tertiary-container py-2 px-12 bg-light-tertiary-container dark:bg-dark-tertiary-container rounded-full shadow-sm shadow-light-shadow dark:shadow-dark-shadow"
+            href="www.linkedin.com/in/briandv198"
+          >
             Contacto
           </a>
         </div>
@@ -53,7 +56,7 @@ function App() {
       </section>
 
       {/* Stack de Tecnologías */}
-      <section className="w-full p-8 text-center flex flex-col gap-12 bg-dark-secondary-container text-dark-on-secondary-container">
+      <section className="w-full p-8 text-center flex flex-col gap-12 bg-light-secondary-container dark:bg-dark-secondary-container text-light-on-secondary-container dark:text-dark-on-secondary-container">
         <h3 className="font-light showXElements showXElements">Stack de tecnologías</h3>
         <div className="flex flex-wrap justify-around items-center gap-10">
           <img

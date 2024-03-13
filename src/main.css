@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply text-dark-on-background bg-gradient-to-br from-dark-surface to-dark-surface-container-low;
+    @apply text-light-on-background dark:text-dark-on-background bg-gradient-to-br from-light-surface dark:from-dark-surface to-light-surface-container-low dark:to-dark-surface-container-low;
   }
 
   h1 {
@@ -32,11 +32,11 @@
   }
 
   b {
-    @apply text-dark-primary font-semibold;
+    @apply text-light-primary dark:text-dark-primary font-semibold;
   }
 
   a {
-    @apply underline text-dark-tertiary;
+    @apply underline text-light-tertiary dark:text-dark-tertiary;
   }
 }
 @layer components {
@@ -51,7 +51,7 @@
   }
 
   .card-project {
-    @apply p-4 flex flex-col gap-8 bg-dark-primary-container text-dark-on-primary-container rounded border-2 border-dark-outline showXElements;
+    @apply p-4 flex flex-col gap-8 bg-light-primary-container dark:bg-dark-primary-container text-light-on-primary-container dark:text-dark-on-primary-container rounded border border-light-outline dark:border-dark-outline showXElements  shadow-sm shadow-light-shadow dark:shadow-dark-shadow;
     @apply w-full max-w-md min-w-min;
     @apply md:w-full md:max-w-none md:flex-row;
   }
