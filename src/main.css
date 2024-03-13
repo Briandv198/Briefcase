@@ -3,11 +3,71 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Readex Pro';
+  font-family: 'Readex Pro';
 }
+
 body {
-    @apply bg-dark-background text-dark-on-background
+  @apply text-dark-on-background bg-gradient-to-br from-dark-surface to-dark-surface-container-low;
 }
-b{
-    @apply text-dark-primary
+
+b {
+  @apply text-dark-primary;
+}
+
+a {
+  @apply underline text-dark-tertiary;
+}
+
+/* Animations */
+.showXElements {
+  view-timeline-name: --xElements;
+  view-timeline-axis: block;
+
+  animation-timeline: --xElements;
+  animation-name: show;
+
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+.showYElements {
+  view-timeline-name: --xElements;
+  view-timeline-axis: inline;
+
+  animation-timeline: --xElements;
+  animation-name: show;
+
+  animation-range: entry 10% cover 20%;
+  animation-fill-mode: both;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 30%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+@keyframes slideaway {
+  from {
+    display: block;
+  }
+  to {
+    transform: translateY(40px);
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.animate-ping2:hover {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) 1;
 }
