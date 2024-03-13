@@ -53,7 +53,7 @@ function App() {
             Contacto
           </a>
         </div>
-        <img loading="lazy" className="w-full md:w-1/2 max-w-96 showXElements" src="/FT.png" alt="Avatar" />
+        <img loading="lazy" className="w-full md:w-1/2 max-w-96 showXElements" src="/base2.png" alt="Avatar" />
       </section>
 
       {/* Stack de Tecnologías */}
