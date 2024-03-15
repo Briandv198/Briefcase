@@ -45,10 +45,10 @@
     @apply xl:flex-row xl:px-28;
   }
   .stack-container {
-    @apply w-full flex justify-around gap-24;
+    @apply w-full flex justify-around gap-24 py-4;
   }
   .stack-image {
-    @apply h-20 inline-block grayscale hover:grayscale-0 hover:scale-125 opacity-75 hover:opacity-100 showXElements object-contain transition-all ease-in-out;
+    @apply h-20 inline-block hover:scale-150 opacity-75 hover:opacity-100 showXElements object-contain transition-all ease-in-out;
     @apply xl:h-20;
   }
 
@@ -66,20 +66,9 @@
     @apply md:w-1/3 object-contain;
   }
 
-  .bg {
-    @apply -z-50;
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    right: -50%;
-    bottom: -50%;
-    width: 200%;
-    height: 200vh;
-    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
-    background-repeat: repeat;
-    animation: bg-animation 0.2s infinite;
-    opacity: 0.7;
-    visibility: visible;
+  .link-button {
+    @apply flex justify-center gap-8 items-center w-[45%] min-w-max no-underline font-medium text-2xl text-light-on-tertiary-container dark:text-dark-on-tertiary-container py-2 px-12 bg-light-tertiary-container dark:bg-dark-tertiary-container rounded-full shadow-sm shadow-light-shadow dark:shadow-dark-shadow hover:cursor-pointer hover:scale-105 transition-all ease-in-out;
+    @apply hover:bg-light-tertiary-fixed-dim hover:text-light-on-tertiary-fixed dark:hover:bg-dark-tertiary-fixed-dim dark:hover:text-dark-on-tertiary-fixed;
   }
 }
 

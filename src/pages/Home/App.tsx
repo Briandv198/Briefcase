@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Projects from '../../components/projects/Projects';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
@@ -35,46 +36,76 @@ const projectData: ProjectProps[] = [
     imageSrc: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217376288076070963/Varcha.png?ex=6603cd04&is=65f15804&hm=78cd1a18589b821d6f091474ab7c1c3d0341204bc9182d025f2a44a543c839c0&',
   },
 ];
-const TechnologyStack = () => (
-  <>
-    <img
-      loading="lazy"
-      className="stack-image"
-      src="https://cdn.discordapp.com/attachments/1217316505147015179/1217371805640167424/icons8-react-a-javascript-library-for-building-user-interfaces-96.png?ex=6603c8d8&is=65f153d8&hm=5009ad9ec2b665df7ae3ebaa8267a46da32e108b57efa340d305215fede8425c&"
-      alt="ReactJs"
-    />
-    <img
-      loading="lazy"
-      className="stack-image"
-      src="https://cdn.discordapp.com/attachments/1217316505147015179/1217372018459017296/next_js_logo_icon_145038_1.png?ex=6603c90a&is=65f1540a&hm=c15ee9c5d2d059ebf2ef66ff24290c095816b096f60ff310f060f0d3a71e3767&"
-      alt="NextJs"
-    />
-    <img
-      loading="lazy"
-      className="stack-image"
-      src="https://cdn.discordapp.com/attachments/1217316505147015179/1217371400424390748/icons8-tailwind-css-96.png?ex=6603c877&is=65f15377&hm=3587d2f831e1bdb1cdf5022f8512df93dcd14037fa72c71673bbf072352fc701&"
-      alt="Tailwind CSS"
-    />
-    <img
-      loading="lazy"
-      className="stack-image"
-      src="https://cdn.discordapp.com/attachments/1217316505147015179/1217371631480213534/icons8-bootstrap-96.png?ex=6603c8ae&is=65f153ae&hm=c287a305cc4d92b956cf45f546d4396017cd97e6e234a2f8d52f2f41d86ff6a2&"
-      alt="Bootstrap"
-    />
-    <img
-      loading="lazy"
-      className="stack-image"
-      src="https://cdn.discordapp.com/attachments/1217316505147015179/1217371645216423946/icons8-figma-96.png?ex=6603c8b1&is=65f153b1&hm=4b8adc57dbe5acd8307362813fc4213aa1131557b7fb574d33f21e5e7380e051&"
-      alt="Figma"
-    />
-    <img
-      loading="lazy"
-      className="stack-image"
-      src="https://cdn.discordapp.com/attachments/1217316505147015179/1217371655467175936/icons8-adobe-96.png?ex=6603c8b4&is=65f153b4&hm=59163a4331f94eb0731bbcf17c8de9b35b2a375a793f102dc87fba257ea19901&"
-      alt="Abobe"
-    />
-  </>
-);
+
+interface StackItemProps {
+  src: string;
+  alt: string;
+  isHovered?: number;
+  hoveredIndex?: number | null;
+  onMouseEnter?: any;
+  onMouseLeave?: any;
+}
+const stackItems: StackItemProps[] = [
+  {
+    src: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217371805640167424/icons8-react-a-javascript-library-for-building-user-interfaces-96.png?ex=6603c8d8&is=65f153d8&hm=5009ad9ec2b665df7ae3ebaa8267a46da32e108b57efa340d305215fede8425c&',
+    alt: 'ReactJs',
+  },
+  {
+    src: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217372018459017296/next_js_logo_icon_145038_1.png?ex=6603c90a&is=65f1540a&hm=c15ee9c5d2d059ebf2ef66ff24290c095816b096f60ff310f060f0d3a71e3767&',
+    alt: 'NextJs',
+  },
+  {
+    src: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217371400424390748/icons8-tailwind-css-96.png?ex=6603c877&is=65f15377&hm=3587d2f831e1bdb1cdf5022f8512df93dcd14037fa72c71673bbf072352fc701&',
+    alt: 'Tailwind CSS',
+  },
+  {
+    src: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217371631480213534/icons8-bootstrap-96.png?ex=6603c8ae&is=65f153ae&hm=c287a305cc4d92b956cf45f546d4396017cd97e6e234a2f8d52f2f41d86ff6a2&',
+    alt: 'Bootstrap',
+  },
+  {
+    src: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217371645216423946/icons8-figma-96.png?ex=6603c8b1&is=65f153b1&hm=4b8adc57dbe5acd8307362813fc4213aa1131557b7fb574d33f21e5e7380e051&',
+    alt: 'Figma',
+  },
+  {
+    src: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217371655467175936/icons8-adobe-96.png?ex=6603c8b4&is=65f153b4&hm=59163a4331f94eb0731bbcf17c8de9b35b2a375a793f102dc87fba257ea19901&',
+    alt: 'Abobe',
+  },
+];
+const StackItem = ({ src, alt, isHovered, hoveredIndex, onMouseEnter, onMouseLeave }: StackItemProps) => {
+  return (
+    <div className="stack-item">
+      <img
+        loading="lazy"
+        className={`stack-image ${hoveredIndex != null ? isHovered != hoveredIndex && 'blur-sm scale-90 grayscale' : ''}`}
+        src={src}
+        alt={alt}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+      />
+    </div>
+  );
+};
+
+const TechnologyStack = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const handleMouseEnter = (index: number) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
+  return (
+    <>
+      {stackItems.map((item, index) => (
+        <StackItem key={index} src={item.src} alt={item.alt} isHovered={index} hoveredIndex={hoveredIndex} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave} />
+      ))}
+    </>
+  );
+};
+
 function App() {
   return (
     <>
@@ -88,17 +119,11 @@ function App() {
             <b>Bootstrap</b>, <b>Figma</b>, entre otras.
           </p>
           <div className="w-full flex flex-wrap justify-around items-center gap-6 ">
-            <a
-              className="flex justify-center gap-8 items-center w-[45%] min-w-max no-underline font-medium text-2xl text-light-on-tertiary-container dark:text-dark-on-tertiary-container py-2 px-12 bg-light-tertiary-container dark:bg-dark-tertiary-container rounded-full shadow-sm shadow-light-shadow dark:shadow-dark-shadow hover:cursor-pointer hover:scale-105 transition-all ease-in-out"
-              href="https://www.linkedin.com/in/briandv198"
-            >
+            <a className="link-button" href="https://www.linkedin.com/in/briandv198">
               <FaLinkedin />
               Linkedin
             </a>
-            <a
-              className="flex justify-center gap-8 items-center w-[45%] min-w-max no-underline font-medium text-2xl text-light-on-tertiary-container dark:text-dark-on-tertiary-container py-2 px-12 bg-light-tertiary-container dark:bg-dark-tertiary-container rounded-full shadow-sm shadow-light-shadow dark:shadow-dark-shadow hover:cursor-pointer hover:scale-105 transition-all ease-in-out"
-              href="https://www.linkedin.com/in/briandv198"
-            >
+            <a className="link-button" href="https://www.linkedin.com/in/briandv198">
               <FaGithub />
               Github
             </a>
@@ -108,10 +133,10 @@ function App() {
       </section>
 
       {/* Stack de Tecnologías */}
-      <section className="w-full flex justify-center bg-light-secondary-container dark:bg-dark-secondary-container bg-opacity-75 dark:bg-opacity-75 backdrop-blur-sm dark:backdrop-blur-sm text-light-on-secondary-container dark:text-dark-on-secondary-container">
+      <section className="w-full flex justify-center bg-light-secondary-container dark:bg-dark-secondary-container border border-light-outline dark:border-dark-outline bg-opacity-75 dark:bg-opacity-75 backdrop-blur-sm dark:backdrop-blur-sm text-light-on-secondary-container dark:text-dark-on-secondary-container">
         <div className="w-full max-w-7xl p-8 text-center flex flex-col gap-12 overflow-hidden">
           <h3 className="font-light showXElements showXElements">Stack de tecnologías</h3>
-          <div className="stack-container">
+          <div className="stack-container flex-wrap">
             <TechnologyStack />
           </div>
         </div>
