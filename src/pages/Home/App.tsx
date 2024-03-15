@@ -125,7 +125,7 @@ function App() {
               <FaLinkedin />
               Linkedin
             </a>
-            <a className="link-button filled w-1/2" href="https://www.linkedin.com/in/briandv198" target="_blank">
+            <a className="link-button filled w-1/2" href="https://github.com/briandv198" target="_blank">
               <FaGithub />
               Github
             </a>
