@@ -72,7 +72,7 @@
   }
 
   .link-button {
-    @apply py-2 px-12 max-w-xs flex justify-center gap-4 items-center min-w-min no-underline  rounded-full shadow-sm  hover:cursor-pointer hover:scale-105 transition-all ease-in-out showXElements;
+    @apply py-2 px-12 max-w-xs flex justify-center gap-4 items-center min-w-max no-underline  rounded-full shadow-sm  hover:cursor-pointer hover:scale-105 transition-all ease-in-out showXElements;
   }
   .link-button.filled {
     @apply text-light-on-tertiary-container dark:text-dark-on-tertiary-container bg-light-tertiary-container dark:bg-dark-tertiary-container shadow-light-shadow dark:shadow-dark-shadow;

@@ -121,11 +121,11 @@ function App() {
             <b>Bootstrap</b>, <b>Figma</b>, entre otras.
           </p>
           <div className="w-full flex flex-col md:flex-row justify-around items-center gap-4">
-            <a className="link-button filled w-1/2" href="https://www.linkedin.com/in/briandv198" target="_blank">
+            <a className="link-button filled w-full md:w-1/2" href="https://www.linkedin.com/in/briandv198" target="_blank">
               <FaLinkedin />
               Linkedin
             </a>
-            <a className="link-button filled w-1/2" href="https://github.com/briandv198" target="_blank">
+            <a className="link-button filled w-full md:w-1/2" href="https://github.com/briandv198" target="_blank">
               <FaGithub />
               Github
             </a>
