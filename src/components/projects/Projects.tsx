@@ -36,13 +36,13 @@ const Projects = ({ title, description, repoLink, demoLink, technologies, imageS
         </div>
         <div className="w-full self-end flex justify-evenly md:justify-end flex-wrap gap-6 my-2">
           {repoLink && (
-            <a href={repoLink} className="link-button outlined self-end" target="_blank">
+            <a href={repoLink} className="link-button outlined self-end w-full md:w-auto" target="_blank">
               <FaGithub />
               Repositorio
             </a>
           )}
           {demoLink && (
-            <a href={demoLink} className="link-button outlined self-end" target="_blank">
+            <a href={demoLink} className="link-button outlined self-end w-full md:w-auto" target="_blank">
               <FaGlobe />
               Demo
             </a>
