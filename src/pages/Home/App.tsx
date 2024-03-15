@@ -7,11 +7,9 @@ export interface ProjectProps {
   title: string;
   description: string;
   repoLink: string;
-  repoName: string;
   demoLink: string;
-  demoName: string;
   technologies: string[];
-  imageSrc?: string;
+  imageSrc: string[];
 }
 
 const projectData: ProjectProps[] = [
@@ -19,21 +17,25 @@ const projectData: ProjectProps[] = [
     title: 'Rick and Morty',
     description: 'En este proyecto ocupe react para conectarme a la API de Rich and Morty y obtener la información de los personajes.',
     repoLink: 'https://github.com/Briandv198/rick-morty',
-    repoName: 'rick-morty',
     demoLink: 'https://rick-and-morty-briandv198.netlify.app/',
-    demoName: 'Rick and Morty página',
     technologies: ['React', 'JavaScript', 'CSS', 'Webpack', 'Node', 'Netlify'],
-    imageSrc: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217367384516595803/RyM.png?ex=6603c4ba&is=65f14fba&hm=e27e09286d61ddc0243f23db5ed95a80945349377342a1ff7ece786ce71ba4c4&',
+    imageSrc: [
+      'https://cdn.discordapp.com/attachments/1217316505147015179/1217367384516595803/RyM.png?ex=6603c4ba&is=65f14fba&hm=e27e09286d61ddc0243f23db5ed95a80945349377342a1ff7ece786ce71ba4c4&',
+      'https://cdn.discordapp.com/attachments/1217316505147015179/1218272842320314418/RyM2.jpg?ex=66071000&is=65f49b00&hm=2b64073ce650203c826ece99369a86761c205f031c9fb86c7246f75f0fc59c64&',
+      'https://cdn.discordapp.com/attachments/1217316505147015179/1218272853980348487/RyM3.jpg?ex=66071002&is=65f49b02&hm=7e614af4d0eded1c66e74ad8e3b1210b03a14babf8679baa56a43e4e9a28eded&',
+    ],
   },
   {
     title: 'Varcha Transportes',
     description: 'Para este cliente desarrolle una Landing Page para su empresa de transporte, siendo mobile-first el diseño.',
     repoLink: '',
-    repoName: '',
     demoLink: 'https://varcha-transportes.com/',
-    demoName: 'Varcha Transportes',
     technologies: ['Astro', 'HTML', 'CSS', 'Node', 'Netlify'],
-    imageSrc: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217376288076070963/Varcha.png?ex=6603cd04&is=65f15804&hm=78cd1a18589b821d6f091474ab7c1c3d0341204bc9182d025f2a44a543c839c0&',
+    imageSrc: [
+      'https://cdn.discordapp.com/attachments/1217316505147015179/1218276105484501002/varcha.jpg?ex=6607130a&is=65f49e0a&hm=0db9e9604eeea8715c90cee98abf4fd10bce974d0370b68dfcec8cf1487dace7&',
+      'https://cdn.discordapp.com/attachments/1217316505147015179/1218276114552590396/varcha2.jpg?ex=6607130c&is=65f49e0c&hm=a390fcf4b6059582d889365b4f8b614f18c9e3c3db697ed9cb609267032f64a4&',
+      'https://cdn.discordapp.com/attachments/1217316505147015179/1218276123645968404/varcha3.jpg?ex=6607130e&is=65f49e0e&hm=80b03727cf3921dfda3fef84cdd721926f4cd49053b9bd009c2ee035586bdfa5&',
+    ],
   },
 ];
 
@@ -118,12 +120,12 @@ function App() {
             <b>mantenibles</b>, <b>accesibles</b> y <b>fáciles de manejar</b> por el usuario. Tengo experiencia en tecnologías como <b>React</b>, <b>Next.js</b>, <b>Astro</b>, <b>Tailwind CSS</b>,{' '}
             <b>Bootstrap</b>, <b>Figma</b>, entre otras.
           </p>
-          <div className="w-full flex flex-wrap justify-around items-center gap-6 ">
-            <a className="link-button" href="https://www.linkedin.com/in/briandv198">
+          <div className="w-full flex flex-col md:flex-row justify-around items-center gap-4">
+            <a className="link-button filled w-1/2" href="https://www.linkedin.com/in/briandv198">
               <FaLinkedin />
               Linkedin
             </a>
-            <a className="link-button" href="https://www.linkedin.com/in/briandv198">
+            <a className="link-button filled w-1/2" href="https://www.linkedin.com/in/briandv198">
               <FaGithub />
               Github
             </a>
@@ -151,9 +153,7 @@ function App() {
               title={project.title}
               description={project.description}
               repoLink={project.repoLink}
-              repoName={project.repoName}
               demoLink={project.demoLink}
-              demoName={project.demoName}
               technologies={project.technologies}
               imageSrc={project.imageSrc}
             />
