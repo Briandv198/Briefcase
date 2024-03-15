@@ -133,7 +133,7 @@ function App() {
       </section>
 
       {/* Stack de Tecnologías */}
-      <section className="w-full flex justify-center bg-light-secondary-container dark:bg-dark-secondary-container border border-light-outline dark:border-dark-outline bg-opacity-75 dark:bg-opacity-75 backdrop-blur-sm dark:backdrop-blur-sm text-light-on-secondary-container dark:text-dark-on-secondary-container">
+      <section className="w-full flex justify-center bg-light-secondary-container dark:bg-dark-secondary-container border-y border-light-outline dark:border-dark-outline bg-opacity-75 dark:bg-opacity-75 backdrop-blur-sm dark:backdrop-blur-sm text-light-on-secondary-container dark:text-dark-on-secondary-container">
         <div className="w-full max-w-7xl p-8 text-center flex flex-col gap-12 overflow-hidden">
           <h3 className="font-light showXElements showXElements">Stack de tecnologías</h3>
           <div className="stack-container flex-wrap">
