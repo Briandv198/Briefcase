@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply text-light-on-background dark:text-dark-on-background bg-gradient-to-br from-light-surface dark:from-dark-surface to-light-surface-container-low dark:to-dark-surface-container-low;
+    @apply text-light-on-background dark:text-dark-on-background bg-gradient-to-br from-light-surface-dim dark:from-dark-surface-dim to-light-surface-bright dark:to-dark-surface-dim;
   }
 
   h1 {
@@ -44,9 +44,11 @@
     @apply p-8 flex flex-col gap-14 justify-center items-center text-center;
     @apply xl:flex-row xl:px-28;
   }
-
+  .stack-container {
+    @apply w-full flex justify-around gap-24;
+  }
   .stack-image {
-    @apply h-16 hover:animate-pulse hover:scale-110 showXElements object-contain transition-all ease-in-out;
+    @apply h-20 inline-block grayscale hover:grayscale-0 hover:scale-125 opacity-75 hover:opacity-100 showXElements object-contain transition-all ease-in-out;
     @apply xl:h-20;
   }
 

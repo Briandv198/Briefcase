@@ -1,5 +1,6 @@
 import { ReactNode, useEffect, useState } from 'react';
 import Footer from '../components/footer/Footer';
+import './_Layout.css';
 
 type props = {
   children: ReactNode;
@@ -22,7 +23,22 @@ const _Layout = ({ children }: props) => {
 
   return (
     <>
-      <div className="bg"></div>
+      {darkMode ? (
+        <div className="bg-animation -z-50">
+          <div className="dark-stars"></div>
+          <div className="dark-stars2"></div>
+          <div className="dark-stars3"></div>
+          <div className="dark-stars4"></div>
+        </div>
+      ) : (
+        <div className="bg-animation -z-50">
+          <div className="stars"></div>
+          <div className="stars2"></div>
+          <div className="stars3"></div>
+          <div className="stars4"></div>
+        </div>
+      )}
+
       <div
         className="absolute top-0 right-0 m-4 p-2 inline-block z-50 bg-light-secondary-container dark:bg-dark-secondary-container rounded-full shadow-sm shadow-light-shadow dark:shadow-dark-shadow hover:cursor-pointer hover:scale-110 transition-all ease-in-out"
         onClick={handleDarkMode}
