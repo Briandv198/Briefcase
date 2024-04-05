@@ -8,7 +8,6 @@ const Projects = ({ title, description, repoLink, demoLink, figmaLink, technolog
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // const nextIndex = currentIndex === imageSrc.length - 1 ? 0 : currentIndex + 1; // Calcula el próximo índice
       const nextIndex = (currentIndex + 1) % imageSrc.length; // Calcula el próximo índice basado en el tamaño del arreglo imageSrc
 
       setCurrentIndex(nextIndex);
@@ -22,7 +21,7 @@ const Projects = ({ title, description, repoLink, demoLink, figmaLink, technolog
       <div className="md:w-1/3 relative flex rounded-md overflow-hidden">
         <div className="scroll-content">
           {imageSrc.map((src, index) => (
-            <img key={index} src={src} className={`showXElements ${index != currentIndex ? 'hidden' : ''}`} alt={title} />
+            <img key={index} src={src} className={`showXElements ${index != currentIndex ? 'hidden' : 'show'}`} alt={title} />
           ))}
         </div>
       </div>

@@ -15,34 +15,27 @@ export interface ProjectProps {
 
 const projectData: ProjectProps[] = [
   {
-    title: 'Rick and Morty',
-    description: 'En este proyecto ocupe react para conectarme a la API de Rich and Morty y obtener la información de los personajes.',
-    repoLink: 'https://github.com/Briandv198/rick-morty',
-    demoLink: 'https://rick-and-morty-briandv198.netlify.app/',
-    technologies: ['React', 'JavaScript', 'CSS', 'Webpack', 'Node', 'Netlify'],
-    imageSrc: ['./img/RyM.png', './img/RyM2.png', './img/RyM3.png'],
+    title: 'CLM',
+    description: 'Este fue el design system de una empresa que solicito hacer un CLM y se pensaba desarrollar con React.',
+    figmaLink: 'https://www.figma.com/file/a36sLXTkmjFtz4NUXFZRuH/Zero-CLM-Design-System?type=design&mode=design&t=H1S239Zhn1T87uYn-1',
+    technologies: ['Figma, React'],
+    imageSrc: ['./img/clm.webp', './img/clm2.webp', './img/clm3.webp'],
   },
   {
     title: 'Varcha Transportes',
     description: 'Para este cliente desarrolle una Landing Page para su empresa de transporte, siendo mobile-first el diseño.',
     demoLink: 'https://varcha-transportes.com/',
+    figmaLink: 'https://www.figma.com/file/6hKhdfbGATgsaDiEj45Yyf/Landing-Page?type=design&node-id=0%3A1&mode=design&t=geQgA6XIDDD6SbOT-1',
     technologies: ['Astro', 'HTML', 'CSS', 'Node', 'Netlify'],
-    imageSrc: [
-      'https://cdn.discordapp.com/attachments/1217316505147015179/1218276105484501002/varcha.jpg?ex=6607130a&is=65f49e0a&hm=0db9e9604eeea8715c90cee98abf4fd10bce974d0370b68dfcec8cf1487dace7&',
-      'https://cdn.discordapp.com/attachments/1217316505147015179/1218276114552590396/varcha2.jpg?ex=6607130c&is=65f49e0c&hm=a390fcf4b6059582d889365b4f8b614f18c9e3c3db697ed9cb609267032f64a4&',
-      'https://cdn.discordapp.com/attachments/1217316505147015179/1218276123645968404/varcha3.jpg?ex=6607130e&is=65f49e0e&hm=80b03727cf3921dfda3fef84cdd721926f4cd49053b9bd009c2ee035586bdfa5&',
-    ],
+    imageSrc: ['./img/varcha.webp', './img/varcha2.webp', './img/varcha3.webp'],
   },
   {
-    title: 'CLM',
-    description: 'Este fue el design system de una empresa que solicito hacer un CLM.',
-    figmaLink: 'https://varcha-transportes.com/',
-    technologies: ['Figma'],
-    imageSrc: [
-      'https://cdn.discordapp.com/attachments/1217316505147015179/1218276105484501002/varcha.jpg?ex=6607130a&is=65f49e0a&hm=0db9e9604eeea8715c90cee98abf4fd10bce974d0370b68dfcec8cf1487dace7&',
-      'https://cdn.discordapp.com/attachments/1217316505147015179/1218276114552590396/varcha2.jpg?ex=6607130c&is=65f49e0c&hm=a390fcf4b6059582d889365b4f8b614f18c9e3c3db697ed9cb609267032f64a4&',
-      'https://cdn.discordapp.com/attachments/1217316505147015179/1218276123645968404/varcha3.jpg?ex=6607130e&is=65f49e0e&hm=80b03727cf3921dfda3fef84cdd721926f4cd49053b9bd009c2ee035586bdfa5&',
-    ],
+    title: 'Rick and Morty',
+    description: 'En este proyecto ocupe react para conectarme a la API de Rich and Morty y obtener la información de los personajes.',
+    repoLink: 'https://github.com/Briandv198/rick-morty',
+    demoLink: 'https://rick-and-morty-briandv198.netlify.app/',
+    technologies: ['React', 'JavaScript', 'CSS', 'Webpack', 'Node', 'Netlify'],
+    imageSrc: ['./img/RyM.webp', './img/RyM2.webp', './img/RyM3.webp'],
   },
 ];
 
@@ -54,32 +47,34 @@ interface StackItemProps {
   onMouseEnter?: any;
   onMouseLeave?: any;
 }
+
 const stackItems: StackItemProps[] = [
   {
-    src: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217371805640167424/icons8-react-a-javascript-library-for-building-user-interfaces-96.png?ex=6603c8d8&is=65f153d8&hm=5009ad9ec2b665df7ae3ebaa8267a46da32e108b57efa340d305215fede8425c&',
+    src: './icons/react.webp',
     alt: 'ReactJs',
   },
   {
-    src: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217372018459017296/next_js_logo_icon_145038_1.png?ex=6603c90a&is=65f1540a&hm=c15ee9c5d2d059ebf2ef66ff24290c095816b096f60ff310f060f0d3a71e3767&',
+    src: './icons/next.webp',
     alt: 'NextJs',
   },
   {
-    src: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217371400424390748/icons8-tailwind-css-96.png?ex=6603c877&is=65f15377&hm=3587d2f831e1bdb1cdf5022f8512df93dcd14037fa72c71673bbf072352fc701&',
+    src: './icons/tailwind.webp',
     alt: 'Tailwind CSS',
   },
   {
-    src: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217371631480213534/icons8-bootstrap-96.png?ex=6603c8ae&is=65f153ae&hm=c287a305cc4d92b956cf45f546d4396017cd97e6e234a2f8d52f2f41d86ff6a2&',
+    src: './icons/bootstrap.webp',
     alt: 'Bootstrap',
   },
   {
-    src: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217371645216423946/icons8-figma-96.png?ex=6603c8b1&is=65f153b1&hm=4b8adc57dbe5acd8307362813fc4213aa1131557b7fb574d33f21e5e7380e051&',
+    src: './icons/figma.webp',
     alt: 'Figma',
   },
   {
-    src: 'https://cdn.discordapp.com/attachments/1217316505147015179/1217371655467175936/icons8-adobe-96.png?ex=6603c8b4&is=65f153b4&hm=59163a4331f94eb0731bbcf17c8de9b35b2a375a793f102dc87fba257ea19901&',
+    src: './icons/adobe.webp',
     alt: 'Abobe',
   },
 ];
+
 const StackItem = ({ src, alt, isHovered, hoveredIndex, onMouseEnter, onMouseLeave }: StackItemProps) => {
   return (
     <div className="stack-item">
