@@ -3,7 +3,7 @@ import { ProjectProps } from '../../pages/Home/App';
 import { FaGithub } from 'react-icons/fa';
 import { FaGlobe } from 'react-icons/fa';
 
-const Projects = ({ title, description, repoLink, demoLink, technologies, imageSrc }: ProjectProps) => {
+const Projects = ({ title, description, repoLink, demoLink, figmaLink, technologies, imageSrc }: ProjectProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -39,6 +39,12 @@ const Projects = ({ title, description, repoLink, demoLink, technologies, imageS
             <a href={repoLink} className="link-button outlined self-end w-full md:w-auto" target="_blank">
               <FaGithub />
               Repositorio
+            </a>
+          )}
+          {figmaLink && (
+            <a href={figmaLink} className="link-button outlined self-end w-full md:w-auto" target="_blank">
+              <FaGithub />
+              Figma
             </a>
           )}
           {demoLink && (

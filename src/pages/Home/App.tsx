@@ -6,8 +6,9 @@ import { FaLinkedin } from 'react-icons/fa';
 export interface ProjectProps {
   title: string;
   description: string;
-  repoLink: string;
-  demoLink: string;
+  repoLink?: string;
+  demoLink?: string;
+  figmaLink?: string;
   technologies: string[];
   imageSrc: string[];
 }
@@ -19,18 +20,24 @@ const projectData: ProjectProps[] = [
     repoLink: 'https://github.com/Briandv198/rick-morty',
     demoLink: 'https://rick-and-morty-briandv198.netlify.app/',
     technologies: ['React', 'JavaScript', 'CSS', 'Webpack', 'Node', 'Netlify'],
-    imageSrc: [
-      'https://cdn.discordapp.com/attachments/1217316505147015179/1217367384516595803/RyM.png?ex=6603c4ba&is=65f14fba&hm=e27e09286d61ddc0243f23db5ed95a80945349377342a1ff7ece786ce71ba4c4&',
-      'https://cdn.discordapp.com/attachments/1217316505147015179/1218272842320314418/RyM2.jpg?ex=66071000&is=65f49b00&hm=2b64073ce650203c826ece99369a86761c205f031c9fb86c7246f75f0fc59c64&',
-      'https://cdn.discordapp.com/attachments/1217316505147015179/1218272853980348487/RyM3.jpg?ex=66071002&is=65f49b02&hm=7e614af4d0eded1c66e74ad8e3b1210b03a14babf8679baa56a43e4e9a28eded&',
-    ],
+    imageSrc: ['./img/RyM.png', './img/RyM2.png', './img/RyM3.png'],
   },
   {
     title: 'Varcha Transportes',
     description: 'Para este cliente desarrolle una Landing Page para su empresa de transporte, siendo mobile-first el diseño.',
-    repoLink: '',
     demoLink: 'https://varcha-transportes.com/',
     technologies: ['Astro', 'HTML', 'CSS', 'Node', 'Netlify'],
+    imageSrc: [
+      'https://cdn.discordapp.com/attachments/1217316505147015179/1218276105484501002/varcha.jpg?ex=6607130a&is=65f49e0a&hm=0db9e9604eeea8715c90cee98abf4fd10bce974d0370b68dfcec8cf1487dace7&',
+      'https://cdn.discordapp.com/attachments/1217316505147015179/1218276114552590396/varcha2.jpg?ex=6607130c&is=65f49e0c&hm=a390fcf4b6059582d889365b4f8b614f18c9e3c3db697ed9cb609267032f64a4&',
+      'https://cdn.discordapp.com/attachments/1217316505147015179/1218276123645968404/varcha3.jpg?ex=6607130e&is=65f49e0e&hm=80b03727cf3921dfda3fef84cdd721926f4cd49053b9bd009c2ee035586bdfa5&',
+    ],
+  },
+  {
+    title: 'CLM',
+    description: 'Este fue el design system de una empresa que solicito hacer un CLM.',
+    figmaLink: 'https://varcha-transportes.com/',
+    technologies: ['Figma'],
     imageSrc: [
       'https://cdn.discordapp.com/attachments/1217316505147015179/1218276105484501002/varcha.jpg?ex=6607130a&is=65f49e0a&hm=0db9e9604eeea8715c90cee98abf4fd10bce974d0370b68dfcec8cf1487dace7&',
       'https://cdn.discordapp.com/attachments/1217316505147015179/1218276114552590396/varcha2.jpg?ex=6607130c&is=65f49e0c&hm=a390fcf4b6059582d889365b4f8b614f18c9e3c3db697ed9cb609267032f64a4&',
@@ -154,6 +161,7 @@ function App() {
               description={project.description}
               repoLink={project.repoLink}
               demoLink={project.demoLink}
+              figmaLink={project.figmaLink}
               technologies={project.technologies}
               imageSrc={project.imageSrc}
             />
