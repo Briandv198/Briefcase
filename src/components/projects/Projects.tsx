@@ -21,7 +21,7 @@ const Projects = ({ title, description, repoLink, demoLink, figmaLink, technolog
       <div className="md:w-1/3 relative flex rounded-md overflow-hidden">
         <div className="scroll-content">
           {imageSrc.map((src, index) => (
-            <img key={index} src={src} className={`showXElements ${index != currentIndex ? 'hidden' : 'show'}`} alt={title} />
+            <img key={index} src={src} className={`${index != currentIndex ? 'hidden' : 'show'}`} alt={title} />
           ))}
         </div>
       </div>

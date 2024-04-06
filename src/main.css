@@ -97,27 +97,55 @@
   animation-range: entry 25% cover 30%;
   animation-fill-mode: both;
 }
-.showYElements {
+
+.card-project:nth-child(even) {
   view-timeline-name: --xElements;
-  view-timeline-axis: inline;
+  view-timeline-axis: block;
 
   animation-timeline: --xElements;
   animation-name: show;
 
-  animation-range: entry 10% cover 20%;
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+
+.card-project:nth-child(odd) {
+  view-timeline-name: --xElements;
+  view-timeline-axis: block;
+
+  animation-timeline: --xElements;
+  animation-name: show2;
+
+  animation-range: entry 20% cover 30%;
   animation-fill-mode: both;
 }
 
 @keyframes show {
   from {
+    transform: translatex(-100px);
     opacity: 0;
-    scale: 30%;
+    /* scale: 30%; */
   }
   to {
+    transform: translatex(0px);
     opacity: 1;
-    scale: 100%;
+    /* scale: 100%; */
   }
 }
+
+@keyframes show2 {
+  from {
+    transform: translatex(100px);
+    opacity: 0;
+    /* scale: 30%; */
+  }
+  to {
+    transform: translatex(0px);
+    opacity: 1;
+    /* scale: 100%; */
+  }
+}
+
 @keyframes slideaway {
   from {
     display: block;

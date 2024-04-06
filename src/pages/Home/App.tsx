@@ -148,7 +148,7 @@ function App() {
       {/* Portafolio */}
       <section className="w-full max-w-7xl p-8 flex flex-col gap-12">
         <h2 className="text-center showXElements">Portafolio</h2>
-        <div className="flex flex-wrap justify-around gap-8">
+        <div className="flex flex-wrap justify-around gap-8 projects-container">
           {projectData.map((project, index) => (
             <Projects
               key={index}
