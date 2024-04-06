@@ -17,7 +17,7 @@ const Projects = ({ title, description, repoLink, demoLink, figmaLink, technolog
   }, [currentIndex, imageSrc.length]);
 
   return (
-    <div className="card-project justify-between">
+    <div className="card-project justify-between showXElements">
       <div className="md:w-1/3 relative flex rounded-md overflow-hidden">
         <div className="scroll-content">
           {imageSrc.map((src, index) => (
@@ -27,9 +27,9 @@ const Projects = ({ title, description, repoLink, demoLink, figmaLink, technolog
       </div>
       <div className="md:w-2/3 p-4 flex flex-col gap-3">
         <div className="flex flex-col gap-3">
-          <h3 className="howXElements">{title}</h3>
-          <p className="text-sm font-medium dark:font-normal howXElements">{description}</p>
-          <p className="text-sm showXElements">
+          <h3 className="">{title}</h3>
+          <p className="text-sm font-medium dark:font-normal">{description}</p>
+          <p className="text-sm">
             Tecnologías usadas: <i className="font-semibold">{technologies.join(', ')}</i>
           </p>
         </div>

@@ -48,12 +48,12 @@
     @apply w-full flex justify-around gap-24 py-4;
   }
   .stack-image {
-    @apply h-20 inline-block hover:scale-150 opacity-75 hover:opacity-100 showXElements object-contain transition-all ease-in-out;
+    @apply h-20 inline-block hover:scale-150 opacity-75 hover:opacity-100 object-contain transition-all ease-in-out;
     @apply xl:h-20;
   }
 
   .card-project {
-    @apply flex flex-col gap-4 bg-light-primary-container dark:bg-dark-primary-container text-light-on-primary-container dark:text-dark-on-primary-container rounded-md border border-light-outline dark:border-dark-outline showXElements  shadow-sm shadow-light-shadow dark:shadow-dark-shadow;
+    @apply flex flex-col gap-4 bg-light-primary-container dark:bg-dark-primary-container text-light-on-primary-container dark:text-dark-on-primary-container rounded-md border border-light-outline dark:border-dark-outline shadow-sm shadow-light-shadow dark:shadow-dark-shadow;
     @apply w-full max-w-md min-w-min;
     @apply md:w-full md:max-w-none md:flex-row;
   }
@@ -74,7 +74,7 @@
   }
 
   .link-button {
-    @apply py-2 px-12 max-w-xs flex justify-center gap-4 items-center min-w-max no-underline  rounded-full shadow-sm  hover:cursor-pointer hover:scale-105 transition-all ease-in-out showXElements;
+    @apply py-2 px-12 max-w-xs flex justify-center gap-4 items-center min-w-max no-underline  rounded-full shadow-sm  hover:cursor-pointer hover:scale-105 transition-all ease-in-out;
   }
   .link-button.filled {
     @apply text-light-on-tertiary-container dark:text-dark-on-tertiary-container bg-light-tertiary-container dark:bg-dark-tertiary-container shadow-light-shadow dark:shadow-dark-shadow;
@@ -92,57 +92,20 @@
   view-timeline-axis: block;
 
   animation-timeline: --xElements;
-  animation-name: show;
+  animation-name: show1;
 
-  animation-range: entry 25% cover 30%;
+  animation-range: entry 15% cover 25%;
   animation-fill-mode: both;
 }
 
-.card-project:nth-child(even) {
-  view-timeline-name: --xElements;
-  view-timeline-axis: block;
-
-  animation-timeline: --xElements;
-  animation-name: show;
-
-  animation-range: entry 25% cover 30%;
-  animation-fill-mode: both;
-}
-
-.card-project:nth-child(odd) {
-  view-timeline-name: --xElements;
-  view-timeline-axis: block;
-
-  animation-timeline: --xElements;
-  animation-name: show2;
-
-  animation-range: entry 20% cover 30%;
-  animation-fill-mode: both;
-}
-
-@keyframes show {
+@keyframes show1 {
   from {
-    transform: translatex(-100px);
+    transform: translatey(-25px);
     opacity: 0;
-    /* scale: 30%; */
   }
   to {
-    transform: translatex(0px);
+    transform: translatey(0px);
     opacity: 1;
-    /* scale: 100%; */
-  }
-}
-
-@keyframes show2 {
-  from {
-    transform: translatex(100px);
-    opacity: 0;
-    /* scale: 30%; */
-  }
-  to {
-    transform: translatex(0px);
-    opacity: 1;
-    /* scale: 100%; */
   }
 }
 

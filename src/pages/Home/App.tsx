@@ -77,7 +77,7 @@ const stackItems: StackItemProps[] = [
 
 const StackItem = ({ src, alt, isHovered, hoveredIndex, onMouseEnter, onMouseLeave }: StackItemProps) => {
   return (
-    <div className="stack-item">
+    <div className="stack-item showXElements">
       <img
         loading="lazy"
         className={`stack-image ${hoveredIndex != null ? isHovered != hoveredIndex && 'blur-sm scale-90 grayscale' : ''}`}
@@ -123,11 +123,11 @@ function App() {
             <b>Bootstrap</b>, <b>Figma</b>, entre otras.
           </p>
           <div className="w-full flex flex-col md:flex-row justify-around items-center gap-4">
-            <a className="link-button filled w-full md:w-1/2" href="https://www.linkedin.com/in/briandv198" target="_blank">
+            <a className="link-button filled w-full md:w-1/2 showXElements" href="https://www.linkedin.com/in/briandv198" target="_blank">
               <FaLinkedin />
               Linkedin
             </a>
-            <a className="link-button filled w-full md:w-1/2" href="https://github.com/briandv198" target="_blank">
+            <a className="link-button filled w-full md:w-1/2 showXElements" href="https://github.com/briandv198" target="_blank">
               <FaGithub />
               Github
             </a>
@@ -138,13 +138,14 @@ function App() {
 
       {/* Stack de Tecnologías */}
       <section className="w-full flex justify-center bg-light-secondary-container dark:bg-dark-secondary-container border-y border-light-outline dark:border-dark-outline bg-opacity-75 dark:bg-opacity-75 backdrop-blur-sm dark:backdrop-blur-sm text-light-on-secondary-container dark:text-dark-on-secondary-container">
-        <div className="w-full max-w-7xl p-8 text-center flex flex-col gap-12 overflow-hidden">
-          <h3 className="font-light showXElements showXElements">Stack de tecnologías</h3>
+        <div className="w-full max-w-7xl p-8 text-center flex flex-col gap-12">
+          <h3 className="font-light showXElements">Stack de tecnologías</h3>
           <div className="stack-container flex-wrap">
             <TechnologyStack />
           </div>
         </div>
       </section>
+
       {/* Portafolio */}
       <section className="w-full max-w-7xl p-8 flex flex-col gap-12">
         <h2 className="text-center showXElements">Portafolio</h2>
