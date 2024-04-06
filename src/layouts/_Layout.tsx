@@ -6,7 +6,7 @@ type props = {
   children: ReactNode;
 };
 const _Layout = ({ children }: props) => {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode);

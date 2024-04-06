@@ -16,14 +16,24 @@ export interface ProjectProps {
 const projectData: ProjectProps[] = [
   {
     title: 'CLM',
-    description: 'Este fue el design system de una empresa que solicito hacer un CLM y se pensaba desarrollar con React.',
+    description:
+      'Dirigí este proyecto donde una empresa requirió un CLM (Contract Lifecycle Management). El System Design se desarrollo en Figma basándonos en el tema Material y su futura implementación con NextJs con TypeScript y Tailwind CSS.',
     figmaLink: 'https://www.figma.com/file/a36sLXTkmjFtz4NUXFZRuH/Zero-CLM-Design-System?type=design&mode=design&t=H1S239Zhn1T87uYn-1',
     technologies: ['Figma, React'],
     imageSrc: ['./img/clm.webp', './img/clm2.webp', './img/clm3.webp'],
   },
   {
+    title: 'Portafolio Personal',
+    description:
+      'Este proyecto personal, desarrollado con React con TypeScript y Tailwind CSS, sirve como mi portafolio de trabajo. Está inspirado en una combinación de Glassmorphism y Brutalism, con un diseño responsive centrado en Mobile-First. Además, incluye modos claro y oscuro.',
+    repoLink: 'https://github.com/Briandv198/briefcase',
+    technologies: ['Figma, React'],
+    imageSrc: ['./img/briefcase.webp', './img/briefcase2.webp', './img/briefcase3.webp'],
+  },
+  {
     title: 'Varcha Transportes',
-    description: 'Para este cliente desarrolle una Landing Page para su empresa de transporte, siendo mobile-first el diseño.',
+    description:
+      'Desarrollé una Landing Page para la empresa de transporte de un cliente, con un enfoque centrado en el usuario diseñado en Figma con un enfoque mobile-first. Posteriormente, fue implementado en Astro y desplegado en Netlify.',
     demoLink: 'https://varcha-transportes.com/',
     figmaLink: 'https://www.figma.com/file/6hKhdfbGATgsaDiEj45Yyf/Landing-Page?type=design&node-id=0%3A1&mode=design&t=geQgA6XIDDD6SbOT-1',
     technologies: ['Astro', 'HTML', 'CSS', 'Node', 'Netlify'],
@@ -31,7 +41,8 @@ const projectData: ProjectProps[] = [
   },
   {
     title: 'Rick and Morty',
-    description: 'En este proyecto ocupe react para conectarme a la API de Rich and Morty y obtener la información de los personajes.',
+    description:
+      'Este proyecto fue desarrollado en la escuela de desarrollo web de Platzi utilizando React, y Webpack para su empaquetado. En él, establecí la conexión a la API pública de Rick and Morty, y posteriormente lo desplegué en Netlify',
     repoLink: 'https://github.com/Briandv198/rick-morty',
     demoLink: 'https://rick-and-morty-briandv198.netlify.app/',
     technologies: ['React', 'JavaScript', 'CSS', 'Webpack', 'Node', 'Netlify'],
